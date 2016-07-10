@@ -1,0 +1,12 @@
+\documentclass[ignorenonframetext,red]{beamer}
+%\documentclass[]{beamer}
+\renewcommand\mathfamilydefault{\rmdefault}
+\beamertemplatenavigationsymbolsempty
+\defbeamertemplate{footline}{author and page number}{%
+  \usebeamercolor[fg]{page number in head/foot}%
+    \usebeamerfont{page number in head/foot}%
+  \hspace{1em}\insertshortauthor\hfill%
+    \insertpagenumber\,/\,\insertpresentationendpage\kern1em\vskip2pt%
+}
+\setbeamertemplate{footline}[author and page number]{}
+\input{main.tex}

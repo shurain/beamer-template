@@ -1,0 +1,78 @@
+\mode<article>{\usepackage{fullpage}}
+\mode<presentation>{\usetheme{shurain}}
+
+
+\usepackage{kotex}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[normal, tight, center]{subfigure}
+\usepackage{amssymb}
+\usepackage{pgf}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{algorithm2e}
+\usepackage{setspace}
+
+
+\DeclareMathOperator*{\argmin}{\arg\!\min}
+\DeclareMathOperator*{\argmax}{\arg\!\max}
+
+\include{pygments}
+
+\setbeamercovered{transparent}
+
+\def\supertiny{ \font\supertinyfont = cmr10 at 7pt \relax \supertinyfont}
+
+
+\title[\hspace{2em}\insertframenumber/\inserttotalframenumber]{\huge{Title}}
+\subtitle{Subtitle}
+\author[Sungjoo Ha]{Sungjoo Ha}
+\date{July 10th, 2016}
+
+% \institute{
+%     Optimization Lab \\
+%     Seoul National University \\
+%     Computer Science \\
+%     GECCO 2015
+% }
+
+\begin{document}
+
+\frame{
+\maketitle
+}
+
+
+\begin{frame}
+    \frametitle{Title}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Zen of NumPy\footnote[frame]{\url{https://github.com/numpy/numpy/issues/2389}}}
+{\scriptsize
+등간격이 흩어진 것보다 낫다. \\
+\qquad \qquad {\color{gray}Strided is better than scattered} \\
+연속된 것이 등간격보다 낫다. \\
+\qquad \qquad {\color{gray}Contiguous is better than strided} \\
+원하는 것을 설명하는 편이 명령을 내리는 것보다 낫다 (데이터 타입을 사용하자). \\
+\qquad \qquad {\color{gray}Descriptive is better than imperative (use data-types)} \\
+배열 지향이 대체로 객체 지향보다 낫다. \\
+\qquad \qquad {\color{gray}Array-oriented is often better than object-oriented} \\
+브로드캐스팅은 좋은 아이디어다 -- 가능하면 사용하자. \\
+\qquad \qquad {\color{gray}Broadcasting is a great idea -- use where possible} \\
+벡터화한 것이 명시적인 루프보다 좋다. \\
+\qquad \qquad {\color{gray}Vectorized is better than an explicit loop} \\
+하지만 복잡하다면 numexpr, weave나 Cython을 사용해라. \\
+\qquad \qquad {\color{gray}Unless it's complicated --- then use numexpr, weave, or Cython} \\
+고차원에서 생각하라. \\
+\qquad \qquad {\color{gray}Think in higher dimensions} \\
+}
+\end{frame}
+
+
+\end{document}
